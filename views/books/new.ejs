@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookStore</title>
+</head>
+
+<body>
+    <h3>Create a New Book</h3>
+    <form method="POST" action="/books">
+        <input name="book[title]" placeholder="enter title" type="text" />
+        <br /><br />
+        <textarea name="book[author]" placeholder="enter author name"></textarea>
+        <br /><br />
+        <input name="book[image]" placeholder="enter image URL/Link" type="text" />
+        <br /><br />
+        <input name="book[price]" placeholder="enter price" type="number" />
+        <br /><br />
+        <textarea name="book[description]" placeholder="enter description"></textarea>
+        <br /><br />
+        <button>Add</button>
+    </form>
+</body>
+
+</html> -->
+
+
+
+<% layout("/layouts/boilerplate") %>
+
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <br><br>
+            <h3>Create a New Book</h3>
+            <form method="POST" action="/books" novalidate class="needs-validation">
+
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input id="title" name="book[title]" placeholder="Add a catchy title" type="text"
+                        class="form-control" required />
+                    <div class="valid-feedback">Title looks good!</div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Author</label>
+                    <textarea name="book[author]" class="form-control" required></textarea>
+                    <div class="invalid-feedback">Please enter author name</div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Book Image</label>
+                    <input name="book[image]" type="text" class="form-control" required />
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input name="book[price]" placeholder="120" class="form-control" required />
+                        <div class="invalid-feedback">Price should be valid</div>
+                    </div>
+
+                    <div class="mb-3 col-md-8">
+                        <label for="description" class="form-label">Description</label>
+                        <input name="book[description]" placeholder="" type="text" class="form-control" required />
+                        <div class="invalid-feedback">Description should be valid</div>
+                    </div>
+                </div>
+              
+
+                <button class="btn btn-dark add-btn mt-3">Add</button>
+                <br>
+                <br>
+
+            </form>
+        </div>
+    </div>
