@@ -8,7 +8,7 @@ const ejsMate = require("ejs-mate");
 const multer = require("multer");
 const upload = multer({ dest: "uploads/" }); // For file uploads, if needed
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/bookstore";
+const MONGO_URL = "mongodb+srv://p222333344444:DQRPC3jwxwdlXxs1@cluster0.ayjibmw.mongodb.net/bookstore?retryWrites=true&w=majority&appName=Cluster0";
 
 main()
   .then(() => {
